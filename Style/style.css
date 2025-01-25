@@ -1,0 +1,119 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background: linear-gradient(to bottom, #dfd6f7, #9ea8e9);
+    animation: rotate 6s infinite alternate;
+}
+
+.login-form {
+    z-index: 3;
+    border-radius: 0.75rem;
+    background: #e0d6fc;
+    height: 340px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom:60px;
+    position: relative; 
+}
+
+.login-form input,
+.login-form button {
+    width: 90%; 
+    height: 30px; 
+    margin-bottom: 0px;
+}
+
+.login-form h2 {
+    font-size: 25px;
+    font-family: "ubuntu", sans-serif;
+    color: rgb(166, 99, 229);
+}
+
+.login-form input {
+    border: 1px solid #ebebeb;
+    padding: 10px 70px;
+    width: auto; 
+    font-family: Segoe UI;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.375s; 
+}
+
+.login-form input:focus {
+    outline: 2px solid #9279ff;
+    outline-offset: 2px;
+}
+
+.login-form input:hover {
+    border: 2px solid #682b9a;
+}
+
+.login-form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: #9b6ae6;
+    color: white;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+    width: auto;
+}
+
+.login-form button:hover {
+    background: #c3a0ff;
+}
+
+.login-form a {
+    color: rgb(132, 92, 173);
+    font-size: 0.9rem;
+    text-align: left;
+    text-decoration: none;
+    margin-bottom: 0px;
+    transition: all 0.3s;
+}
+
+.login-form a:hover {
+    color: #bf8bff;
+}
+
+
+.error-message {
+    color: rgb(73, 14, 122);               
+    font-size: 0.8em;
+    font-weight: bold;         
+    margin-top: 20px;      
+    text-align: center;
+    position: absolute; 
+    bottom: 20px; 
+    width: 100%;
+}
+
+@keyframes rotate {
+    100% {
+        background-position: 15% 50%;
+    }
+}
+
+@media (min-width: 500px) {
+    .login-form {
+        width: 300px;
+    }
+}

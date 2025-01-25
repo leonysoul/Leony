@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "MilkyNice";
+    src: url("fonts/MilkyNice-Clean.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #dfd6f7, #9ea8e9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 70%;
+    max-width: 600px;
+    height: 350px;
+    background: #dfdbff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.profile-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+
+.bio {
+    flex: 1;
+    font-family: "MilkyNice";
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.bio p {
+    font-size: 18px;
+    margin-bottom: 9px;
+    color: rgb(138, 99, 229);
+    font-family: "MilkyNice";
+    margin-left: 28px;
+}
+
+.bio p.verif {
+    font-size: 13px;
+    font-family: "MilkyNice";
+    margin-bottom: -20px;
+}
+
+.judul {
+    margin-bottom: 20px;
+}
+
+.judul img {
+    max-width: 90%;
+    height: 80px;
+    border-radius: 8px; 
+}
+
+.photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo img {
+    width: 150px;
+    height: 200px; /* Mengatur foto menjadi rasio 3:4 */
+    object-fit: cover;
+    border: 3px solid #9ea8e9;
+    border-radius: 8px; /* Membuat sudut foto sedikit melengkung */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .photo img {
+        width: 120px;
+        height: 160px; /* Menyesuaikan ukuran foto untuk tampilan lebih kecil */
+    }
+
+    .bio h2 {
+        font-size: 20px;
+    }
+
+    .bio p {
+        font-size: 14px;
+    }
+}
